@@ -1,9 +1,10 @@
 .box {
-    width: 500px;
+    width: 600px;
     border: 15px solid black;
-    height: 500px;
+    height: 600px;
     margin: auto;
     text-align: center;
+    border-radius: 1rem;
 }
 
 
@@ -54,5 +55,7 @@
     height: 100vh;
     place-items: center;
   }
+
+
   
 

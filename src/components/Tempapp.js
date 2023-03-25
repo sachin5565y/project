@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './css/style.css';
+import {WiHumidity} from 'react-icons/wi'
+import {BiCurrentLocation} from 'react-icons/bi'
 function Tempapp() {
     const [city,setCity]=useState(null);
     const [search,setSearch]=useState("new delhi");
@@ -27,13 +29,14 @@ function Tempapp() {
         ):(
             <div>
             <div className='info'>
-        <h2 className='location'><i className="fa-solid fa-location-dot"></i> {search}</h2>
-        <h3 className='temp'>{city.temp}° </h3>
-        <h3> Humidity-{city.humidity}</h3>
+        <h2 className='location'><BiCurrentLocation/> {search}</h2>
+        <weather>
+        <h4 className='temp'>{city.temp}° </h4>
+        <h4><WiHumidity/> Humidity-{city.humidity}</h4>
+        <h4>FeelsLike-{city.feels_like}</h4>
+        <h6>Min-Temp{city.temp_min} Max-Temp{city.temp_max}</h6>
+        </weather>
     </div>
-    <div className='wave-one'></div>
-    <div className='wave-two'></div>
-    <div className='wave-three'></div>
     </div>
         )}
         </div>
